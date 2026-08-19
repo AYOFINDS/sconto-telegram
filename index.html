@@ -35,6 +35,9 @@
             padding: 40px 30px;
             max-width: 440px;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
             position: relative;
@@ -57,7 +60,7 @@
             100% { transform: translateX(30%); }
         }
 
-        /* RENDERE LA FOTO PERFETTAMENTE ROTONDA */
+        /* FOTO PROFILO PERFETTAMENTE CENTRATA E ROTONDA */
         .profile-img {
             width: 110px;
             height: 110px;
@@ -65,7 +68,8 @@
             object-fit: cover;
             border: 4px solid #0088cc;
             box-shadow: 0 0 20px rgba(0, 136, 204, 0.5);
-            margin-bottom: 20px;
+            margin: 0 auto 20px auto;
+            display: block;
         }
 
         .badge-discount {
@@ -138,10 +142,8 @@
 <body>
 
     <div class="container">
-        <!-- RICERCA IL FILE RINOMINATO FOTO.JPG -->
         <img src="foto.jpg" alt="AYO FINDS Profilo" class="profile-img">
         
-        <br>
         <div class="badge-discount">Sconto Esclusivo -40%</div>
         
         <h1>AYO FINDS</h1>
