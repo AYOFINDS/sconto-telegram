@@ -4,18 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AYO FINDS | Offerte & Sconti Esclusivi</title>
-    <!-- Carichiamo un font moderno e professionale -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* RESET GENERALE PER EVITARE SPAZI VUOTI INDESIDERATI */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Inter', sans-serif; /* Applica il font moderno */
+            font-family: 'Inter', sans-serif;
         }
 
-        /* STILE DELLO SFONDO: SCURO CON EFFETTO SFUMATO (RADIAL GRADIENT) */
         body {
             background: #0d0f12;
             background-image: 
@@ -29,10 +26,9 @@
             padding: 20px;
         }
 
-        /* STILE DEL CONTENITORE PRINCIPALE (LA SCHEDA) CON EFFETTO VETRO */
         .container {
             background: rgba(22, 27, 34, 0.75);
-            backdrop-filter: blur(16px); /* Sfoca lo sfondo dietro la scheda */
+            backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 24px;
@@ -45,7 +41,6 @@
             overflow: hidden;
         }
 
-        /* LINEA COLORATA ANIMATA IN ALTO NELLA SCHEDA */
         .container::before {
             content: '';
             position: absolute;
@@ -62,25 +57,17 @@
             100% { transform: translateX(30%); }
         }
 
-        /* --- PARTE IMPORTANTE: STILE PER RENDERE LA FOTO ROTONDA --- */
+        /* FOTO PROFILO PERFETTAMENTE ROTONDA */
         .profile-img {
-            width: 110px;  /* Larghezza della foto */
-            height: 110px; /* Altezza della foto (deve essere uguale alla larghezza) */
-            
-            /* QUESTO RENDE LA FOTO ROTONDA */
-            border-radius: 50%; 
-            
-            /* QUESTO IMPEDISCE ALL'IMMAGINE DI SCHIACCIARSI */
-            object-fit: cover; 
-            
-            /* BORDO COLORATO E ILLUMINATO INTORNO ALLA FOTO */
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
             border: 4px solid #0088cc;
             box-shadow: 0 0 20px rgba(0, 136, 204, 0.5);
-            
-            margin-bottom: 20px; /* Spazio sotto la foto */
+            margin-bottom: 20px;
         }
 
-        /* STILE DEL BADGE "SCONTO -40%" */
         .badge-discount {
             display: inline-flex;
             align-items: center;
@@ -97,12 +84,10 @@
             margin-bottom: 20px;
         }
 
-        /* AGGIUNGE L'EMOJI DEL FUOCO PRIMA DEL TESTO DEL BADGE */
         .badge-discount::before {
             content: "🔥";
         }
 
-        /* STILE DEL TITOLO PRINCIPALE (AYO FINDS) CON SFUMATURA */
         h1 {
             font-size: 32px;
             font-weight: 800;
@@ -113,7 +98,6 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* STILE DEL TESTO DESCRITTIVO */
         p {
             color: #9da8b6;
             font-size: 16px;
@@ -121,7 +105,6 @@
             margin-bottom: 30px;
         }
 
-        /* STILE DEL PULSANTE TELEGRAM CON EFFETTO AL PASSAGGIO DEL MOUSE */
         .btn-telegram {
             display: flex;
             align-items: center;
@@ -136,48 +119,37 @@
             font-size: 18px;
             font-weight: 700;
             box-shadow: 0 8px 25px rgba(0, 136, 204, 0.35);
-            transition: all 0.3s ease; /* Animazione fluida */
+            transition: all 0.3s ease;
         }
 
-        /* EFFETTO QUANDO SI PASSA IL MOUSE SOPRA IL PULSANTE */
         .btn-telegram:hover {
-            transform: translateY(-3px); /* Solleva leggermente il pulsante */
+            transform: translateY(-3px);
             box-shadow: 0 12px 30px rgba(0, 136, 204, 0.5);
             background: linear-gradient(135deg, #0099e6 0%, #0077b3 100%);
         }
 
-        /* ICONA DI TELEGRAM DENTRO IL PULSANTE */
         .btn-telegram svg {
             width: 24px;
             height: 24px;
             fill: currentColor;
         }
-
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- --- LA TUA FOTO PROFILO --- -->
-        <!-- Il codice CSS ".profile-img" la renderà rotonda -->
-        <img src="foto.jpg" alt="AYO FINDS Profilo" class="profile-img">
+        <!-- LINK DIRETTO ALLA TUA FOTO SU IMGUR -->
+        <img src="https://i.imgur.com/JiAS5MB.jpeg" alt="AYO FINDS Profilo" class="profile-img">
         
         <br>
-        
-        <!-- BADGE DELLO SCONTO -->
         <div class="badge-discount">Sconto Esclusivo -40%</div>
         
-        <!-- TITOLO -->
         <h1>AYO FINDS</h1>
-        
-        <!-- DESCRIZIONE -->
         <p>Unisciti al mio canale Telegram ufficiale per non perdere le migliori offerte del giorno e codici sconto esclusivi!</p>
 
-        <!-- PULSANTE PER ENTRARE NEL CANALE -->
         <a href="https://t.me/+DiuD1AbxY8thYzg0" class="btn-telegram" target="_blank">
-            <!-- Icona SVG di Telegram -->
             <svg viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-14.9.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
             </svg>
             Entra nel Canale Telegram
         </a>
